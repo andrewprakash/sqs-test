@@ -16,3 +16,8 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1
           role-skip-session-tagging: true
+      - name: Send Message to SQS
+        uses: isbang/sqs-action@v0.1.1
+        with:
+          sqs-url: https://sqs.us-east-1.amazonaws.com/404820766655/repo-build-triiger.fifo
+          message: "hi there"
