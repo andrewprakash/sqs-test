@@ -18,6 +18,7 @@ jobs:
           role-skip-session-tagging: true
       - name: Send Message to SQS
         uses: isbang/sqs-action@v0.1.1
+        run: echo $GITHUB_REPOSITORY
         with:
           sqs-url: https://sqs.us-east-1.amazonaws.com/404820766655/trigger-build
           message: $GITHUB_REPOSITORY
