@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Variables
-        run: echo $GITHUB_REPOSITORY
+        run: echo $INPUT_REPO
       - name: Verify with AWS
         uses: aws-actions/configure-aws-credentials@v1
         with:
