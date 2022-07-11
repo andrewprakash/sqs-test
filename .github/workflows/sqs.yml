@@ -17,7 +17,7 @@ jobs:
           aws-region: us-east-1
           role-skip-session-tagging: true
       - name: Send Message to SQS
-        uses: andrewprakash/sqs-message@1.0.1
+        uses: andrewprakash/sqs-message@1.0.2
         with:
           sqs-url: https://sqs.us-east-1.amazonaws.com/404820766655/trigger-build
           variables: "GITHUB_REPOSITORY,GITHUB_REF_NAME"
