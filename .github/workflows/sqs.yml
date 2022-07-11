@@ -24,4 +24,4 @@ jobs:
         uses: isbang/sqs-action@v0.1.1
         with:
           sqs-url: https://sqs.us-east-1.amazonaws.com/404820766655/trigger-build
-          message: ${{ env.REPO }}
+          message: $INPUT_GITHUB_REPOSITORY
