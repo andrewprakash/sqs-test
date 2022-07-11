@@ -21,7 +21,8 @@ jobs:
           aws-region: us-east-1
           role-skip-session-tagging: true
       - name: Send Message to SQS
-        uses: isbang/sqs-action@v0.1.1
+        uses: andrewprakash/sqs-message@v1.0.0
         with:
           sqs-url: https://sqs.us-east-1.amazonaws.com/404820766655/trigger-build
           message: REPO
+          hasVariables: true
