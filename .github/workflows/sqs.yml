@@ -6,7 +6,7 @@ on:
     branches: ["main"]
   workflow_dispatch:
 env:
-  REPO: $GITHUB_REPOSITORY
+  INPUT_REPO: $GITHUB_REPOSITORY
 jobs:
   send-build-request:
     runs-on: ubuntu-latest
@@ -24,4 +24,4 @@ jobs:
         uses: isbang/sqs-action@v0.1.1
         with:
           sqs-url: https://sqs.us-east-1.amazonaws.com/404820766655/trigger-build
-          message: $INPUT_GITHUB_REPOSITORY
+          message: $REPO
