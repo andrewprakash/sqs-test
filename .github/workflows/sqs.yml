@@ -1,9 +1,5 @@
 name: Trigger for SQS
 on:
-  push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
   workflow_dispatch:
 jobs:
   send-build-request:
