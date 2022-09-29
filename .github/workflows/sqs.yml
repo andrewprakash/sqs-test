@@ -5,6 +5,8 @@ jobs:
   send-build-request:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
       - name: Verify with AWS
         uses: aws-actions/configure-aws-credentials@v1
         with:
